@@ -25,7 +25,7 @@ class App extends Component {
 
 const AppContainer = createContainer(
     () => {
-        return {user: Meteor.user};
+        return {user: Meteor.user()};
     },
     App
 );

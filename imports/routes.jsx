@@ -12,3 +12,12 @@ FlowRouter.route('/', {
         });
     }
 });
+
+FlowRouter.route('/login', {
+    name: 'login',
+    action() {
+        mount(AppContainer, {
+            content: <p>Hi from the registration/login page!</p>
+        });
+    }
+});
