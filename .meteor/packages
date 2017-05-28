@@ -24,3 +24,5 @@ kadira:flow-router
 react-meteor-data
 accounts-ui
 accounts-password
+gadicc:blaze-react-component
+useraccounts:materialize
