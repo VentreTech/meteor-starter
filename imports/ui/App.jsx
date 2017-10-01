@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Meteor } from 'meteor/meteor';
+import PropTypes from 'prop-types';
 
 import { createContainer } from 'meteor/react-meteor-data';
 
@@ -14,8 +15,10 @@ class App extends Component {
                 <Header />
                 <main>
                     <div className="content-container">
-                        {this.props.user ? this.props.content :
-                        <AccountsUIWrapper />}
+                        {this.props.user ?
+                            this.props.content :
+                            <AccountsUIWrapper />
+                        }
                     </div>
                 </main>
                 <Footer />
@@ -23,6 +26,11 @@ class App extends Component {
         );
     }
 }
+
+App.propTypes = {
+    user: PropTypes.object,
+    content: PropTypes.object
+};
 
 const AppContainer = createContainer(
     () => {
